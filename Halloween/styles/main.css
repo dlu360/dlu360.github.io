@@ -1,0 +1,201 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width:800px;
+    margin:auto;
+    
+    background: url('../images/bats.gif');
+    background-position:center;
+    box-shadow: 5px 5px 5px black,
+                -5px 5px 5px black;
+}
+
+.header{
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to top right, white, orange, black);
+    border:4px solid black;
+    margin-bottom: 0;
+}
+
+.header img{
+    float:left;
+    margin-right:20px;
+}
+
+.header h1{
+    line-height:10px;
+    font-size:175%;
+}
+
+.header h2{
+    line-height:20px;
+    font-size:150%;
+}
+
+/*
+.header p{
+    line-height:30px;
+    margin：0 0;
+}
+
+.header p:first-line{
+    font-size:175%;
+}
+
+.header p:first-child{
+    font-size:100%;
+}
+*/
+
+#main-title ul{
+    padding-top: 10px;
+    background-color: black;
+    list-style: none;
+    position: relative;
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+
+#main-title ul li{
+    float: left;
+    margin-left: 30px;
+    margin-right: 40px;
+}
+
+#main-title ul li a{
+    color: white;
+    text-decoration: none;  
+}
+
+#main-title ul ul{
+    display: none;
+    position: absolute;
+    top: 26%;
+    text-align: center;
+}
+
+#main-title ul ul li{
+    float: none;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#main-title ul ul li:hover{
+    background-color: gray;
+}
+
+#main-title ul li:hover > ul{
+    background-color: black;
+    display: block;
+}
+
+#main-title > ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.text{
+    text-shadow: 2px 2px 2px black;
+}
+
+.text:hover {color: green;}
+
+.main{
+    background-color:white;
+    border-right:4px solid black;
+    border-left: 4px solid black;
+    margin: auto;
+    overflow:hidden;
+}
+
+.main p{
+    max-height: 40px;
+}
+
+.main h3{
+    font-size:150%;
+    height: 30px
+}
+
+.main h3:first-child:first-letter{
+    font-size:2em;
+    text-transform:uppercase;
+}
+
+.main h4{
+    font-size:125%;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.main h5{
+    font-size:115%;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.area {
+    height:auto;
+}
+
+.area_left {
+    /*float: left;
+    width: 25%;
+    height: 100%;
+    margin-top: 20px;*/
+    float: left;
+}
+
+.area_right {
+    float: right;
+    width: 570px;
+    /*float: right;
+    width: 75%;
+    height: 100%;*/
+}
+
+.area_right img{
+    float:none;
+}
+
+.area_left a{
+    /*color: orange;*/
+    display:block;
+	font-weight:bold;
+	color:black;
+	background-color:orange;
+	width:100px;
+    text-align: left;
+	padding:4px;
+	text-decoration:none;
+    border: 3px solid black;
+    margin-left: auto;
+    margin-bottom: 5px;
+}
+
+.area_right a:link {
+    font-weight: bold;
+    color: orange;
+}
+
+.area_right a:visited{
+    color: black;
+}
+
+.area_right a:hover,a:focus{
+    color: green;
+}
+
+
+footer{
+    /*border-top: 2px solid black;*/
+    margin:0 auto;
+    border:4px solid black;
+    font-size:80%;
+    line-height:30px;
+    text-align:center;
+    background-image: linear-gradient(to bottom left, white, orange, black);
+}

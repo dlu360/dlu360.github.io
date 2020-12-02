@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tuxedo Cat Coffee</title>
+    <link type="text/css" rel="stylesheet" href="cafe.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        var counts = 0;
+        var text = "";
+        
+        function add(num, str){
+            counts = parseFloat(counts + num);
+            text = text + "<option value=" + "\"" + str + "\">$" + num + "-" + str + "</option>";
+            document.getElementById("order").innerHTML=text;
+            document.getElementById("total").innerHTML= "Total: $" + counts;
+            //alert(counts+text);
+        }
+        
+        function button_onclick(){
+            counts = 0;
+            text = "";
+            document.getElementById("order").innerHTML="";
+            document.getElementById("total").innerHTML="";
+            //alert("click");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Tuxedo Cat Coffee"/>
+    </header>
+    <main>
+        <form id="order_form" name="order_form" action="checkout.html" method="get">
+            <section id="menu">
+            	<h2>Menu</h2>
+            	<p>Click an item to add it to your order.</p>
+            	<ul>
+                    <li><span class="label"><a href="#"><img src="images/espresso.jpg" onmouseover='src="images/espresso_info.jpg"' onmouseout='src="images/espresso.jpg"'alt="espresso" class="img" onclick="add(1.95, 'espresso')"/></a></span></li>
+                    <li><span class="label"><a href="#"><img src="images/latte.jpg" onmouseover='src="images/latte_info.jpg"' onmouseout='src="images/latte.jpg"'alt="espresso" class="img" onclick="add(2.95, 'latte')"/></a></span></li>
+                    <li><span class="label"><a href="#"><img src="images/cappuccino.jpg" onmouseover='src="images/cappuccino_info.jpg"' onmouseout='src="images/cappuccino.jpg"'alt="espresso" class="img" onclick="add(3.45, 'cappuccino')"/></a></span></li>
+                    <li><span class="label"><a href="#"><img src="images/coffee.jpg" onmouseover='src="images/coffee_info.jpg"' onmouseout='src="images/coffee.jpg"'alt="espresso" class="img" onclick="add(1.75, 'coffee')"/></a></span></li>
+                    <li><span class="label"><a href="#"><img src="images/biscotti.jpg" onmouseover='src="images/biscotti_info.jpg"' onmouseout='src="images/biscotti.jpg"'alt="espresso" class="img" onclick="add(1.95, 'biscotti')"/></a></span></li>
+                    <li><span class="label"><a href="#"><img src="images/scone.jpg" onmouseover='src="images/scone_info.jpg"' onmouseout='src="images/scone.jpg"'alt="espresso" class="img" onclick="add(2.95, 'scone')"/></a></span></li>
+            	</ul>
+            </section>
+
+            <section>
+            	<h2>Your Order</h2>
+            	<section>
+            		<select id="order" name="order" size="6">
+            		</select>
+            		<p id="total"></p>            		
+           		</section>
+                
+            	<section id="buttons">
+           			<input type="submit" name="place_order" id="place_order" value="Place Order"/>
+           			<input type="button" name="clear_order" id="clear_order" value="Clear Order" onclick="button_onclick()"/>		            		
+            	</section>
+            </section>   
+
+
+
+        </form>
+    </main> 
+</body>
+</html>
